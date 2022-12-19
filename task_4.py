@@ -20,6 +20,6 @@ if __name__ == "__main__":
         b.append(random.randint(-10, 10))
 
     x_list = get_x(matrix, b)
-    
+
     for i, x in enumerate(x_list):
         print(f"X{i+1} = {x}")
