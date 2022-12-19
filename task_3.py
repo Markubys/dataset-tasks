@@ -1,5 +1,6 @@
 import random, numpy
 
+
 def get_matrix_minor(m,i,j):
     return [row[:j] + row[j+1:] for row in (m[:i]+m[i+1:])]
 
@@ -33,7 +34,7 @@ def get_x(matrix, b):
     det = get_matrix_deternminant(matrix)
 
     local_det = []
-    for i in range(0, N):
+    for i in range(0, len(b)):
         m = transpose(matrix)
         m[i] = b
         m = transpose(m)
