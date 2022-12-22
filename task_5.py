@@ -30,16 +30,9 @@ if __name__ == "__main__":
     t_matrix = transpose(matrix)
 
     two_x_two = numpy.matmul(matrix, t_matrix)
-    print_matrix(two_x_two)
-
     two_x_two_inv = numpy.linalg.inv(two_x_two)
-    print_matrix(two_x_two_inv)
-
     two_x_one = numpy.matmul([y_list], t_matrix)
-    
     a_b = numpy.matmul(two_x_one, two_x_two_inv)
-    print(a_b)
     
-    reg = LinearRegression().fit(numpy.array(x_list).reshape(-1, 1), numpy.array(y_list).reshape(-1, 1))
-    print([reg.coef_[0][0], reg.intercept_[0]])
-    pass
+    reg = LinearRegression().fit(numpy.array(y_list).reshape(-1, 1), numpy.array(x_list).reshape(-1, 1))
+    print(f"a = {reg.coef_[0][0]}, b = {reg.intercept_[0]}")
