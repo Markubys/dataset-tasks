@@ -24,4 +24,5 @@ if __name__ == "__main__":
 
     y_diff = sum(math.pow(y - m, 2) for (y, m) in zip(y_list, model))
 
+
     print(f"Sum of squared deviations from calculated = {y_diff}")
