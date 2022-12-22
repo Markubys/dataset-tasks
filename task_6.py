@@ -24,6 +24,7 @@ if __name__ == "__main__":
 
     y_avg = sum(y for y in y_list) / len(y_list)
 
+
     y_diff = sum(math.pow(y - y_avg, 2) for y in y_list)
 
 
