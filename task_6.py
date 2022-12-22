@@ -1,6 +1,5 @@
 import random, numpy, math
 from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
 
 
 if __name__ == "__main__":
